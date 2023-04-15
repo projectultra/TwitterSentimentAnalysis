@@ -4,6 +4,7 @@ import re
 import keras
 import pickle
 import numpy as np
+nltk.download('punkt')
 # Set search variables
 search_words = "canada"
 since_date = "2022-01-01"
