@@ -5,6 +5,7 @@ import keras
 import pickle
 import numpy as np
 nltk.download('punkt')
+nltk.download('wordnet')
 # Set search variables
 search_words = "canada"
 since_date = "2022-01-01"
