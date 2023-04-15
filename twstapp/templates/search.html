@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Twitter Sentiment Analysis</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+		input[type="text"] {
+			width: 300px;
+			padding: 10px;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			border: none;
+			background-color: #fff;
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+		}
+		button[type="submit"] {
+			width: 150px;
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			background-color: #4CAF50;
+			color: #fff;
+			font-size: 16px;
+			cursor: pointer;
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+		}
+		button[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<h1>Twitter Sentiment Analysis</h1>
+    <form action="{% url 'fetch_tweets' %}" method="POST">
+        {% csrf_token %}
+        <label for="tag">Enter a word to search:</label>
+        <input type="text" name="tag" placeholder="Enter a word..." required>
+        <button type="submit">Search</button>
+    </form> 
+</body>
+</html>
