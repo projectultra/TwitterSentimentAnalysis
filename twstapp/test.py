@@ -11,8 +11,8 @@ until_date = "2022-01-07"
 
 # Create a query string for snscrape
 count=10
-mlmodel=keras.models.load_model(r'twstapp\models')
-file = open(r'twstapp\vocab.pkl','rb')
+mlmodel=keras.models.load_model(r'twstapp/models')
+file = open(r'twstapp/vocab.pkl','rb')
 vocab=pickle.load(file)
 vectorizer = keras.layers.TextVectorization(max_tokens=10000, output_mode='int', output_sequence_length=20, vocabulary=vocab)
 
