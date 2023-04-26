@@ -15,7 +15,7 @@ def fetch_tweets(request):
     tag = request.POST.get('tag')
     max_results = 20
     # Analyze sentiment using my ML model
-    mlmodel=keras.models.load_model(r'twstapp\models')
+    mlmodel=keras.models.load_model(r'twstapp/models')
     file = open(r'twstapp/vocab.pkl','rb')
     vocab=pickle.load(file)
     vectorizer = keras.layers.TextVectorization(max_tokens=10000, output_mode='int', output_sequence_length=20, vocabulary=vocab)
