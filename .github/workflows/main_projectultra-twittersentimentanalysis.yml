@@ -24,6 +24,7 @@ jobs:
 
       - name: Create and start virtual environment
         run: |
+          cd Django-app
           python -m venv venv
           source venv/bin/activate
       
