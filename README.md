@@ -9,7 +9,7 @@ The neural network model used for this project is a Convolutional Neural Network
 
 The model was trained on the dataset with an accuracy of ~80%.
 
-A Django App was also built and can be found in the respective folder
+A Django App was also built and can be found in the respective folder.(Unable to deploy due to Twitter API no longer being free)
 
 For future iterations of this project, the following improvements could be made:
 
